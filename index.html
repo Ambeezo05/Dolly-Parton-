@@ -1,110 +1,217 @@
-/* ========================================
-   Body
-======================================== */
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pen</title>
+  </head>
+  <body>
+    <!-- ==========================================================
+GIT 215 Validator Demo
+Dolly Parton Tribute
 
-body {
-  font-family: Arial, sans-serif;
-  color: #333;
-  background-color: beige;
-}
+This file intentionally contains validation errors.
+Instructor notes identify each planted error and its fix.
+=========================================================== -->
 
+<!DOCTYPE html>
+<html lang="en">
 
-/* ========================================
-   Headings & Paragraphs
-======================================== */
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dolly Parton Tribute</title>
+</head>
 
-h1 {
-  font-size: 2.5rem;
-  font-weight: bold;
-  color: deeppink;
-}
+<body>
 
-h2 {
-  font-size: 1.75rem;
-  color: blueviolet;
+    <header>
+        <h1>Dolly Parton Tribute</h1>
+        <p>Singer • Songwriter • Actress • Philanthropist</p>
+    </header>
 
+    <nav>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#songs">Songs</a></li>
+            <li><a href="#philanthropy">Philanthropy</a></li>
+            <li>
+                <a href="https://www.dollyparton.com/" target="_blank">
+                    Official Website
+                </a>
+            </li>
+        </ul>
+    </nav>
 
-  /*
-  CSS VALIDATOR ERROR #1
+    <main>
 
-  ERROR:
-  "none" is not a valid value for font-style.
+        <section id="about">
 
-  FIX:
-  Change:
+            <h2>About Dolly</h2>
 
-  font-style: none;
+            <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwyJOmzxZMVlTnKnwZykihi0pJWXPt3gm-e-uYydMQqg&s"
+                alt="A young Dolly Parton in black and white."
+                width="200">
 
-  TO something valid such as:
+            <!--
+            VALIDATOR ERROR #1 — MISSING CLOSING PARAGRAPH
 
-  font-style: normal;
+            ERROR:
+            The </p> has intentionally been removed.
 
-  or simply remove the property.
-  */
+            WHAT TO SHOW:
+            One missing closing element can cause the validator
+            to report additional problems farther down the page.
 
-  font-style: none;
-}
+            FIX:
+            Add </p> before the next paragraph.
+            -->
 
-
-h3 {
-  font-size: 1.25rem;
-}
-
-
-p {
-  line-height: 1.5;
-}
-
-
-/* ========================================
-   Navigation
-======================================== */
-
-nav ul {
-  list-style: none;
-  padding-left: 0;
-}
-
-
-nav li {
-  display: inline-block;
-  background-color: deeppink;
-
-  height: 2em;
-  width: 150px;
-
-  text-align: center;
-  line-height: 2em;
-}
-
-
-nav a {
-  color: white;
-  text-decoration: none;
-}
+            <p>
+                Dolly Parton is an award-winning singer, songwriter, actress,
+                author, and philanthropist whose career has spanned more than
+                six decades. She is widely recognized for her contributions
+                to country music and for her positive impact on communities
+                around the world.
 
 
-/* ========================================
-   Images
-======================================== */
+            <p>
+                Beyond her music, Dolly is known for her generosity and
+                lifelong commitment to education, literacy, and helping
+                others. Her career demonstrates how creativity, business,
+                and service can work together to make a lasting impact.
+            </p>
 
-img {
-  max-width: 100%;
-  height: auto;
+            <button>Learn More</button>
+
+        </section>
 
 
-  /*
-  CSS VALIDATOR ERROR #2
+        <!--
+        VALIDATOR ERROR #2 — INVALID ID VALUE
 
-  ERROR:
-  Property name is intentionally misspelled.
+        ERROR:
+        id="popular songs"
 
-  BROKEN:
-  border-raduis
+        The ID contains a space.
 
-  CORRECT:
-  border-radius
-  */
+        FIX:
+        Change to something such as:
+        id="popular-songs"
 
-  border-raduis: 8px;
-}
+        NOTE:
+        This is useful for reinforcing clean IDs and fragment links.
+        -->
+
+        <section id="popular songs">
+
+            <h2>Popular Songs</h2>
+
+            <p>
+                Some of Dolly Parton's most recognizable songs include:
+            </p>
+
+            <ol>
+                <li>9 to 5</li>
+                <li>Jolene</li>
+                <li>I Will Always Love You</li>
+                <li>Coat of Many Colors</li>
+                <li>Islands in the Stream</li>
+            </ol>
+
+        </section>
+
+
+        <section>
+
+            <h2>Interesting Facts</h2>
+
+            <ul>
+                <li>Born in Sevier County, Tennessee.</li>
+                <li>Founded the Imagination Library in 1995.</li>
+                <li>Has written thousands of songs throughout her career.</li>
+                <li>
+                    Received numerous Grammy Awards and lifetime achievement
+                    honors.
+                </li>
+            </ul>
+
+        </section>
+
+
+        <section id="philanthropy">
+
+            <h2>Philanthropy</h2>
+
+            <h3>The Imagination Library</h3>
+
+            <p>
+                Dolly Parton's Imagination Library has provided hundreds of
+                millions of free books to children around the world,
+                encouraging literacy and a lifelong love of reading.
+            </p>
+
+
+            <!--
+            VALIDATOR ERROR #3 — INVALID NESTING
+
+            ERROR:
+            A <div> has been placed inside the <blockquote>
+            in a way we don't need for this content.
+
+            DEMO GOAL:
+            Use this to discuss semantic/structural validation.
+
+            FIX:
+            Remove the unnecessary <div> wrapper.
+            -->
+
+            <blockquote>
+                <div>
+                    "If your actions create a legacy that inspires others to
+                    dream more, learn more, do more and become more, then you
+                    are an excellent leader."
+                </div>
+            </blockquote>
+
+
+            <!--
+            VALIDATOR ERROR #4 — MALFORMED IMAGE
+
+            ERROR:
+            The closing > has intentionally been removed.
+
+            FIX:
+            Add > after width="300".
+            -->
+
+            <img
+                src="https://images.unsplash.com/photo-1512820790803-83ca734da794?w=500"
+                alt="Books representing Dolly Parton's commitment to literacy."
+                width="300"
+
+        </section>
+
+    </main>
+
+
+    <footer>
+        <p>Created for GIT 215 — Introduction to Web Development</p>
+        <p>
+            This page is used for instructional demonstrations of HTML
+            and CSS concepts.
+        </p>
+    </footer>
+
+</body>
+
+</html>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
+
+
