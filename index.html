@@ -1,2 +1,110 @@
-<h1>Dolly Parton</h1>
-<h2> here is stuff nobody reads</h2>
+/* ========================================
+   Body
+======================================== */
+
+body {
+  font-family: Arial, sans-serif;
+  color: #333;
+  background-color: beige;
+}
+
+
+/* ========================================
+   Headings & Paragraphs
+======================================== */
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: deeppink;
+}
+
+h2 {
+  font-size: 1.75rem;
+  color: blueviolet;
+
+
+  /*
+  CSS VALIDATOR ERROR #1
+
+  ERROR:
+  "none" is not a valid value for font-style.
+
+  FIX:
+  Change:
+
+  font-style: none;
+
+  TO something valid such as:
+
+  font-style: normal;
+
+  or simply remove the property.
+  */
+
+  font-style: none;
+}
+
+
+h3 {
+  font-size: 1.25rem;
+}
+
+
+p {
+  line-height: 1.5;
+}
+
+
+/* ========================================
+   Navigation
+======================================== */
+
+nav ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+
+nav li {
+  display: inline-block;
+  background-color: deeppink;
+
+  height: 2em;
+  width: 150px;
+
+  text-align: center;
+  line-height: 2em;
+}
+
+
+nav a {
+  color: white;
+  text-decoration: none;
+}
+
+
+/* ========================================
+   Images
+======================================== */
+
+img {
+  max-width: 100%;
+  height: auto;
+
+
+  /*
+  CSS VALIDATOR ERROR #2
+
+  ERROR:
+  Property name is intentionally misspelled.
+
+  BROKEN:
+  border-raduis
+
+  CORRECT:
+  border-radius
+  */
+
+  border-raduis: 8px;
+}
